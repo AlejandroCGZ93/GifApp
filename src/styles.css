@@ -1,0 +1,144 @@
+* {
+  font-family: Helvetica, Arial, sans-serif;
+  color: white;
+  
+}
+  
+body {
+  margin: 0;
+  padding: 0;
+
+}
+
+input{
+    background-color: white;
+    border-radius: 5px;
+    border: 1px solid rgb(97, 32, 158);
+    color: black;
+    font-size: 1.2rem;
+    outline: none;
+    padding: 10px 15px;
+    width: 100%;
+}
+  
+.botones{
+  margin: 5px;
+  
+	
+}
+
+.reset{
+  font-family: Helvetica, Arial, sans-serif;
+  background-color: blueviolet;
+  color: wheat;
+  border-radius: 10px;
+  width: 100px;
+  height: 40px;
+}
+
+.delete{
+  font-family: Helvetica, Arial, sans-serif;
+  background-color: blueviolet;
+  color: wheat;
+  border-radius: 10px;
+  width: 100px;
+  height: 40px;
+}
+
+h1 {
+    font-size: 3.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+  }
+  
+h2 {
+    font-size: 2.5rem;
+  }
+  
+h3 {
+    font-size: 2rem;
+    margin-bottom: 5px;
+  }
+  
+.card-grid {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+   }
+  
+.card {
+    align-content: center;
+    align-items: center;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 20px;
+    margin-right: 20px;
+    overflow: hidden;  
+  
+  }
+  
+.card p {
+  
+    flex: 1;
+    font-size: 1.5rem;
+    margin-top: 5px;
+    padding: 5px 20px 0px 20px;
+    text-align: center;
+  }
+  
+.card img {
+    width: 50%;
+    height: 100%; 
+     
+  }
+
+.Container {
+  height: 330px;
+}
+
+
+.GiffApp {
+    font-family: Helvetica, Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+  }
+
+
+  
+#light {
+    background-color: wheat;
+  }
+  
+ #dark {
+    background-color: #38004c;
+  }
+   
+  
+.switch {
+    display: flex;
+    width: 100px;
+    height: 100px;
+    justify-content: center;
+    align-items: center;
+  }
+  
+.switch label {
+    margin: 10px;
+  }
+  
+ #light .switch label {
+    color: black;
+  }
+  
+#dark .switch label {
+    color: white;
+  }
