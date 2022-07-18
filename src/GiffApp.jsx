@@ -1,17 +1,18 @@
 import React, { useState, createContext } from "react";
-import { AddCategory } from "./components/AddCategoty";
+import { AddCategory } from "./components/AddCategory";
 import { GifGrid } from "./components/GifGrid";
 import Switch from '@mui/material/Switch';
 import Button from '@mui/material/Button';
 import DeleteIcon from '@mui/icons-material/Delete';
 import Stack from '@mui/material/Stack';
 import RotateLeftIcon from '@mui/icons-material/RotateLeft';
+import PropType from 'prop-types'
 
 
 export const ThemeContext = createContext(null);
 
 
-export const GifApp = () => {
+export const GiffApp = () => {
   const [categories, setCategories] = useState([]);
   const [theme, setTheme] = useState("dark");
 
@@ -38,19 +39,19 @@ export const GifApp = () => {
     <> 
       <ThemeContext.Provider value={{ theme, toggleTheme }}>
       <div className="GiffApp" id={theme}>
-      <h1>GifApp</h1>
+      <h1>GiffApp</h1>
       
       <AddCategory addCategory={handleAddCategory} />
       <div className="botones">
       <Stack direction="row" spacing={2}>
       </Stack>
-      <Button variant="outlined" startIcon={<RotateLeftIcon />} className="reset" onClick={handleReset}>Reset</Button>{ "  " }
-      <Button variant="outlined" startIcon={<DeleteIcon />} className="delete" onClick={handleDelete} >Delete</Button>
+      <Button variant="outlined" startIcon={<RotateLeftIcon />} className="reset" onClick={handleReset} data-testid="Button Reset">Reset</Button>{ "  " }
+      <Button variant="outlined" startIcon={<DeleteIcon />} className="delete" onClick={handleDelete} data-testid="Button Delete" >Delete</Button>
       </div> 
-   <div className="switch">
+   <div className="switch" role="switch checkbox" aria-label='switch check'>
         
-          <label> {theme === "light" ? "Light Mode" : "Dark Mode"}</label>
-          <Switch onChange={toggleTheme} checked={theme === "dark"} />
+          <label > {theme === "light" ? "Light Mode" : "Dark Mode"}</label>
+          <Switch onChange={toggleTheme} checked={theme === "dark"}  />
     </div>
   
       {
@@ -66,6 +67,14 @@ export const GifApp = () => {
    
 
     </>
-  );
-};
+  )
+}
 
+ GiffApp.propType = {
+  value: PropType.func.isRequired,
+  checkend: PropType.func.isRequired,
+  switch: PropType.func.isRequired,
+  toggleTheme: PropType.func.isRequired,
+  giffApp: PropType.func.isRequired
+
+}

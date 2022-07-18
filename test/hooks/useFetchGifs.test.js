@@ -18,8 +18,8 @@ describe('Test en hook useFetchGifs', () => {
 
         const {result} = renderHook(()=> useFetchGif('One Punch'));
 
-            await waitFor(
-               ()=>expect( result.current.imagenes ).toBeGreaterThan(0)
+        await waitFor(
+               ()=>expect(result.current.imagenes.length).toBeGreaterThan(0)
   
            )
           
